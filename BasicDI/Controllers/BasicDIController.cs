@@ -16,6 +16,13 @@ namespace BasicDI.Controllers
     }
     */
 
+    private readonly BasicDI _basicDI;
+
+    public BasicDIController(BasicDI basicDI)
+    {
+      _basicDI = basicDI;
+    }
+
     public IActionResult Get()
     {
       return Ok(
