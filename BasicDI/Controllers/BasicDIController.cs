@@ -28,7 +28,7 @@ namespace BasicDI.Controllers
       return Ok(
         new
         {
-          Result = "Hello World!",
+          Result = "Hello World!" + " " + _basicDI.SaySomething(),
         }
       );
     }

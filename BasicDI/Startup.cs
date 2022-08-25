@@ -29,6 +29,8 @@ namespace BasicDI
         .AddJsonOptions(x => x.JsonSerializerOptions.PropertyNamingPolicy = null);
 
       services.AddScoped<BasicDI>();
+
+      services.AddHttpContextAccessor();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +51,8 @@ namespace BasicDI
       {
         endpoints.MapControllers();
       });
+
+      Models.Helper.UseStaticHttpContextAccessor(app);
     }
   }
 }
