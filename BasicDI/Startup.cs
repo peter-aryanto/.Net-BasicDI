@@ -25,6 +25,8 @@ namespace BasicDI
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      Models.Database.DIEntities.ConnString = Configuration.GetConnectionString("DbConnString");
+
       services.AddControllers()
         .AddJsonOptions(x => x.JsonSerializerOptions.PropertyNamingPolicy = null);
 
