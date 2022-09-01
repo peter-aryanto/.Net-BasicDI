@@ -28,7 +28,8 @@ namespace BasicDI.Controllers
       return Ok(
         new
         {
-          Result = "Hello World!" + " " + _basicDI.SaySomething(),
+          //Result = "Hello World!" + " " + _basicDI.SaySomething(),
+          Result = "Class Rooms:" + " " + _basicDI.DIEntities.ClassRooms.ToList().Count,
         }
       );
     }

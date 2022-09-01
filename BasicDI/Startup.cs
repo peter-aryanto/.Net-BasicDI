@@ -31,6 +31,8 @@ namespace BasicDI
         .AddJsonOptions(x => x.JsonSerializerOptions.PropertyNamingPolicy = null);
 
       services.AddScoped<BasicDI>();
+      //services.AddScoped(_ => new DIEntities());
+      services.AddScoped<Models.Database.DIEntities>();
 
       services.AddHttpContextAccessor();
     }

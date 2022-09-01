@@ -19,7 +19,6 @@ namespace BasicDI.Models.Database
     }
 
     public DIEntities() : base(ConnString) { }
-    //public DIEntities(string connString)
 
     public virtual DbSet<ClassRoom> ClassRooms { get; set; }
     public virtual DbSet<Student> Students { get; set; }
